@@ -1,11 +1,9 @@
-import { 
+import {
   DashboardOutlined,
   ShoppingCartOutlined,
-  FontColorsOutlined
+  FontColorsOutlined,
 } from '@ant-design/icons';
-import { APP_PREFIX_PATH } from 'configs/AppConfig'
-
-
+import { APP_PREFIX_PATH } from 'configs/AppConfig';
 
 const dashBoardNavTree = [
   {
@@ -17,7 +15,7 @@ const dashBoardNavTree = [
       title: 'sidenav.dashboard',
       icon: DashboardOutlined,
       breadcrumb: false,
-      submenu: []
+      submenu: [],
     }, {
       key: 'clients',
       path: `${APP_PREFIX_PATH}/user-list`,
@@ -28,22 +26,22 @@ const dashBoardNavTree = [
         key: 'clientList',
         path: `${APP_PREFIX_PATH}/user-list`,
         title: 'sidenav.clientList',
-        submenu: []
-      }]
+        submenu: [],
+      }],
     }, {
       key: 'plan',
       path: `${APP_PREFIX_PATH}/plan-maker`,
       title: 'sidenav.planMaker',
       icon: FontColorsOutlined,
       breadcrumb: true,
-      submenu: []
-    }
-  ]
-  }
-]
+      submenu: [],
+    },
+    ],
+  },
+];
 
 const navigationConfig = [
-  ...dashBoardNavTree
-]
+  ...dashBoardNavTree,
+];
 
 export default navigationConfig;

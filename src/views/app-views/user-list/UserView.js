@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Avatar, Drawer, Divider } from "antd";
+import React, { Component } from 'react';
+import { Avatar, Drawer, Divider } from 'antd';
 import {
   MobileOutlined,
   MailOutlined,
@@ -10,7 +10,7 @@ import {
   InstagramOutlined,
   TwitterOutlined,
   GlobalOutlined,
-} from "@ant-design/icons";
+} from '@ant-design/icons';
 
 export class UserView extends Component {
   render() {
@@ -33,12 +33,17 @@ export class UserView extends Component {
           <h6 className="text-muted text-uppercase mb-3">Account details</h6>
           <p>
             <UserOutlined />
-            <span className="ml-3 text-dark">id: {data?.id}</span>
+            <span className="ml-3 text-dark">
+              id:
+              {data?.id}
+            </span>
           </p>
           <p>
             <CalendarOutlined />
             <span className="ml-3 text-dark">
-              Born in {data?.personalInfo.birthday}
+              Born in
+              {' '}
+              {data?.personalInfo.birthday}
             </span>
           </p>
         </div>
@@ -53,7 +58,7 @@ export class UserView extends Component {
           <p>
             <MailOutlined />
             <span className="ml-3 text-dark">
-              {data?.email ? data?.email : "-"}
+              {data?.email ? data?.email : '-'}
             </span>
           </p>
           <p>
@@ -68,13 +73,13 @@ export class UserView extends Component {
           <p>
             <FacebookOutlined />
             <a href="/#" className="ml-3 text-dark">
-              {data?.personalInfo.facebook ? data?.personalInfo.facebook : "-"}
+              {data?.personalInfo.facebook ? data?.personalInfo.facebook : '-'}
             </a>
           </p>
           <p>
             <TwitterOutlined />
             <a href="/#" className="ml-3 text-dark">
-              {data?.personalInfo.twitter ? data?.personalInfo.twitter : "-"}
+              {data?.personalInfo.twitter ? data?.personalInfo.twitter : '-'}
             </a>
           </p>
           <p>
@@ -82,13 +87,13 @@ export class UserView extends Component {
             <a href="/#" className="ml-3 text-dark">
               {data?.personalInfo.instagram
                 ? data?.personalInfo.instagram
-                : "-"}
+                : '-'}
             </a>
           </p>
           <p>
             <GlobalOutlined />
             <a href="/#" className="ml-3 text-dark">
-              {data?.personalInfo.site ? data?.personalInfo.site : "-"}
+              {data?.personalInfo.site ? data?.personalInfo.site : '-'}
             </a>
           </p>
         </div>

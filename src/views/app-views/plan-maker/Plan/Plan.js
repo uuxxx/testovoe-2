@@ -1,32 +1,32 @@
-import { Switch } from "antd";
-import { useContext, useEffect, useState } from "react";
-import planMakerContext from "../context/planMakerContext";
-import { PlanItem } from "./PlanItems";
-import { removeItem } from "../context/actions";
-import st from "./Plan.module.css";
+import { Switch } from 'antd';
+import { useContext, useEffect, useState } from 'react';
+import planMakerContext from '../context/planMakerContext';
+import { PlanItem } from './PlanItems';
+import { removeItem } from '../context/actions';
+import st from './Plan.module.css';
 
 function get400EmptyDivs() {
   return Array(400)
-    .fill("")
-    .map((_, i) => <div key={i}></div>);
+    .fill('')
+    .map((_, i) => <div key={i} />);
 }
 
 export function Plan() {
   const [isMarkupVisible, setIsMarkupVisible] = useState(false);
   const onChangeMarkupVisibility = () => setIsMarkupVisible((prev) => !prev);
 
-  const {state, dispatch} = useContext(planMakerContext);
+  const { state, dispatch } = useContext(planMakerContext);
 
   useEffect(() => {
     const onKeyDown = (e) => {
-      if(e.key === 'Backspace') {
-        dispatch(removeItem())
+      if (e.key === 'Backspace') {
+        dispatch(removeItem());
       }
-    }
+    };
 
-    document.addEventListener('keydown', onKeyDown)
-    return () => document.removeEventListener('keydown', onKeyDown)
-  }, [dispatch])
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [dispatch]);
 
   return (
     <div className={st.container}>
@@ -42,11 +42,11 @@ export function Plan() {
         </div>
       </div>
       <div className={st.grid}>
-        <div className={`${st["grid-markup"]} ${isMarkupVisible ? st.on : ""}`}>
+        <div className={`${st['grid-markup']} ${isMarkupVisible ? st.on : ''}`}>
           {get400EmptyDivs()}
         </div>
 
-        {Object.keys(state.components).map(id => <PlanItem key={id} id={id}/>)}
+        {Object.keys(state.components).map((id) => <PlanItem key={id} id={id} />)}
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import { THEME_CONFIG } from 'configs/AppConfig';
 import {
   TOGGLE_COLLAPSED_NAV,
   CHANGE_LOCALE,
@@ -6,12 +7,11 @@ import {
   TOP_NAV_COLOR_CHANGE,
   HEADER_NAV_COLOR_CHANGE,
   TOGGLE_MOBILE_NAV,
-  SWITCH_THEME
+  SWITCH_THEME,
 } from '../constants/Theme';
-import { THEME_CONFIG } from 'configs/AppConfig'
 
 const initTheme = {
-  ...THEME_CONFIG
+  ...THEME_CONFIG,
 };
 
 const theme = (state = initTheme, action) => {
@@ -19,46 +19,46 @@ const theme = (state = initTheme, action) => {
     case TOGGLE_COLLAPSED_NAV:
       return {
         ...state,
-        navCollapsed: action.navCollapsed
+        navCollapsed: action.navCollapsed,
       };
     case SIDE_NAV_STYLE_CHANGE:
       return {
         ...state,
-        sideNavTheme: action.sideNavTheme
+        sideNavTheme: action.sideNavTheme,
       };
     case CHANGE_LOCALE:
       return {
         ...state,
-        locale: action.locale
+        locale: action.locale,
       };
     case NAV_TYPE_CHANGE:
       return {
         ...state,
-        navType: action.navType
+        navType: action.navType,
       };
     case TOP_NAV_COLOR_CHANGE:
       return {
         ...state,
-        topNavColor: action.topNavColor
+        topNavColor: action.topNavColor,
       };
     case HEADER_NAV_COLOR_CHANGE:
       return {
         ...state,
-        headerNavColor: action.headerNavColor
+        headerNavColor: action.headerNavColor,
       };
     case TOGGLE_MOBILE_NAV:
       return {
         ...state,
-        mobileNav: action.mobileNav
+        mobileNav: action.mobileNav,
       };
     case SWITCH_THEME:
       return {
         ...state,
-        currentTheme: action.currentTheme
-      }
+        currentTheme: action.currentTheme,
+      };
     default:
       return state;
   }
 };
 
-export default theme
+export default theme;

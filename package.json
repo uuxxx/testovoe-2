@@ -65,7 +65,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"npm run start\" \"gulp watch\""
+    "dev": "concurrently \"npm run start\" \"gulp watch\"",
+    "lint:js": "eslint \"**/*.{js,jsx}\" --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -87,6 +88,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.4",
+    "eslint-config-airbnb": "^19.0.4",
+    "@babel/core": "^7.23.5",
+    "@babel/eslint-parser": "^7.23.3",
     "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
     "gulp-debug": "^4.0.0",
