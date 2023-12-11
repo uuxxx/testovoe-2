@@ -1,0 +1,10 @@
+{
+    "home": "Accueil",
+    
+    "sidenav.dashboard": "Tableau de bord",
+
+    "sidenav.main": "Basique",
+	"sidenav.clients": "Clientèle",
+	"sidenav.clientList": "Liste des clients",
+	"sidenav.planMaker": "Planificateur"
+}

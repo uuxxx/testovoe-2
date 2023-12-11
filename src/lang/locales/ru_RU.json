@@ -1,0 +1,12 @@
+{
+	"home": "Главная",
+	
+	"sidenav.dashboard": "Дашборд",
+  
+
+
+  "sidenav.main": "Основные",
+	"sidenav.clients": "Клиенты",
+	"sidenav.clientList": "Список клиентов",
+	"sidenav.planMaker": "Планировщик"
+}

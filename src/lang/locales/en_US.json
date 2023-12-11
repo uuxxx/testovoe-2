@@ -1,0 +1,11 @@
+{
+	"home": "Home",
+	
+	"sidenav.dashboard": "Dashboard",
+
+
+	"sidenav.main": "Main",
+	"sidenav.clients": "Clients",
+	"sidenav.clientList": "List of clients",
+	"sidenav.planMaker": "Make a plan"
+}

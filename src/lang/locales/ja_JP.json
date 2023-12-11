@@ -1,0 +1,11 @@
+{
+    "home": "ホームページ",
+    
+    "sidenav.dashboard": "ダッシュボード",
+
+
+    "sidenav.main": "基本",
+	"sidenav.clients": "クライアント",
+	"sidenav.clientList": "顧客リスト",
+	"sidenav.planMaker": "計画を立てるには"
+}
